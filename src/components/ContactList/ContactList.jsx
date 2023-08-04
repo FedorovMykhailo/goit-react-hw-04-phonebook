@@ -2,8 +2,6 @@ import css from "../ContactList/ContactList.module.css"
 import PropTypes from "prop-types";
 
 const ContactList = ({ contacts, handleDelete }) => {
-    // console.log(contacts);
-   
     return (
         <ul className={css.contactList}>
             {contacts.map(({ id, name, number }) =>

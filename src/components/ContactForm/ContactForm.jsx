@@ -1,12 +1,7 @@
-import React, { Component } from "react"
 import css from "../ContactForm/ContactForm.module.css"
 import PropTypes from "prop-types";
 
-export default class FormComponent extends Component {
-    
-    render() {
-        const { submit } = this.props
-        
+const FormComponent = ({ submit }) => {     
      return (
          <form onSubmit={submit}>
             <div className={css.formField}>
@@ -27,13 +22,12 @@ export default class FormComponent extends Component {
                 title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                 required />
             </div>
-             
-             <button className={css.formButton }type="submit" >Add contact</button>
-        </form>
-   
-  )
+            <button className={css.formButton }type="submit" >Add contact</button>
+         </form>
+     )
   }
-}
+
+  export default FormComponent
 
 FormComponent.propTypes = {
     submit: PropTypes.func,
